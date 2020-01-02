@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      helloWorldpoo
+      <h1>helloWorld!</h1>
     </div>
   );
 }
