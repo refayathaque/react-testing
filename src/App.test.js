@@ -10,5 +10,6 @@ Enzyme.configure({
 test('renders without crashing', () => {
   const wrapper = shallow(<App />)
   console.log(wrapper.debug()); // logs what is in the DOM
+  // expect(wrapper).toBeFalsy(); will cause test to fail bc we are rendering a proper React component
   expect(wrapper).toBeTruthy();
 });

@@ -1,4 +1,4 @@
-## React Testing with Jest & Enzyme, with Redux, Hooks & Context
+# React Testing with Jest & Enzyme, with Redux, Hooks & Context
 * January 2, 2020*
 
 ### Why is testing important?
@@ -34,6 +34,8 @@
 ### Types of Tests
 - Unit: tests one piece of code (usually a function) and so is narrow and isolated in scope
 - Integration: tests how multiple units work together
+
+## Paradigm
 
 ### 'Test Behavior, not Implementation'
 - Ideally, we do not want to re-write tests after a refactor so keep this ethos in mind when writing tests

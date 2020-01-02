@@ -1,11 +1,26 @@
 import React from 'react';
+import ClickCounter from './ClickCounter';
+import Jotto from './Jotto';
+import { Router, Route, NavLink, Redirect } from 'react-router-dom';
+import history from './history';
 
-const App = () => {
+export default () => {
   return (
-    <div className="App">
-      <h1>helloWorld!</h1>
-    </div>
+    <Router history={history}>
+      <h1>React Testing</h1>
+      <p>
+        <NavLink to='/clickCounter'>
+          ClickCounter
+        </NavLink>
+      </p>
+      <p>
+        <NavLink to='/jotto'>
+          Jotto
+        </NavLink>
+      </p>
+      <Redirect from='/' to='/clickCounter' />
+      <Route path='/clickCounter' component={ClickCounter} />
+      <Route path='/jotto' component={Jotto} />
+    </Router>
   );
 }
-
-export default App;
