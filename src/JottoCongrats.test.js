@@ -16,6 +16,9 @@ const defaultProps = { success: false };
 const setup = ( props = {} ) => {
   const setupProps = { ...defaultProps, ...props };
   // ^ if the props we pass in during tests override the defaultProps declared above, our props will be assigned
+  // "Merge object properties with the spread operator"
+  // https://davidwalsh.name/merge-objects
+  // "In the case of a key collision, the right-most (last) object's value wins out:"
   return shallow(<JottoCongrats {...setupProps} />)
 }
 
