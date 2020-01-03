@@ -7,9 +7,9 @@ Enzyme.configure({
   adapter: new EnzymeAdapter()
 })
 
-test('App renders without crashing', () => {
+test('Renders without crashing', () => {
   const wrapper = shallow(<App />)
-  console.log(wrapper.debug()); // logs what is in the DOM
+  // console.log(wrapper.debug()); logs what is in the DOM, useful for debugging
   // expect(wrapper).toBeFalsy(); will cause test to fail bc we are rendering SOMETHING in the DOM
   expect(wrapper).toBeTruthy();
 });

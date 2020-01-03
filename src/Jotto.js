@@ -1,7 +1,11 @@
 import React from 'react';
+import JottoCongrats from './JottoCongrats';
 
 export default () => {
   return (
-    <h2>Jotto</h2>
+    <div data-test='jotto-component'>
+      <h2>Jotto</h2>
+      <JottoCongrats />
+    </div>
   )
 }
