@@ -18,7 +18,7 @@ const JottoGuessedWords = ({ guessedWords }) => {
         <h3>Guessed words</h3>
         <table>
           <thead>
-            <tr><th>Guess</th><th>Matching Letters</th></tr>
+            <tr><th>Guess</th><th>matching letters</th></tr>
           </thead>
           <tbody>
             { guessWordsRows }

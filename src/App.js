@@ -18,7 +18,7 @@ export default () => {
           Jotto
         </NavLink>
       </p>
-      <Redirect from='/' to='/clickCounter' />
+      <Redirect from='/' to='/jotto' />
       <Route path='/clickCounter' component={ClickCounter} />
       <Route path='/jotto' component={Jotto} />
     </Router>
