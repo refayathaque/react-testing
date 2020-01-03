@@ -12,6 +12,9 @@
 
 > If you get an error like [this](https://github.com/facebook/create-react-app/issues/346#issue-169180761) when trying to run tests with Jest (`npm test`) you will need to upgrade to the latest version of watchman, run `brew upgrade watchman`
 
+> Jest is a JavaScript testing framework used to test JavaScript apps and Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse your React Components’ output.
+  - https://blog.logrocket.com/a-quick-guide-to-testing-react-hooks-fa584c415407/
+
 ### Jest
 - Test runner that comes pre-packaged with `create-react-app`
 - Has its [**own built in matchers for use with the `expect` assertion**](https://jestjs.io/docs/en/expect)
@@ -23,6 +26,8 @@
   - Renders components only one level deep, e.g., will render the parent component but will use placeholders for children components
     - *As opposed to `mount` with renders the parent and all children components*
     - Leads to cleaner and quicker testing due to its 'isolated' nature, i.e., only testing *one* component at a time
+  > Prefer shallow render over mounting the component as it helps testing a component as a unit rather than asserting the behavior of components inside a unit component. This is useful as we use an UI component library like React-Bootstrap in our source code. So we wouldn’t want to test the components from this library (as it’s already been done in the library itself).
+    - https://medium.com/@acesmndr/testing-react-functional-components-with-hooks-using-enzyme-f732124d320a
 - Gives access to props and state, allowing manipulation of values and examining/testing for values
 > `npm install --save-dev enzyme jest-enzyme enzyme-adapter-react-16`
   - ^ adapter tells enzyme what kind of code to expect, in this case the adapter should tell enzyme to expect React 16 code
