@@ -1,12 +1,7 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import ClickCounter from './ClickCounter';
 import { findByTestAttr } from './testUtils';
-
-Enzyme.configure({
-  adapter: new EnzymeAdapter()
-})
 
 /**
 * Factory function to create a ShallowWrapper for the ClickCounter component
