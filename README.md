@@ -26,10 +26,14 @@
 - Gives access to props and state, allowing manipulation of values and examining/testing for values
 
 > `npm install --save-dev enzyme jest-enzyme enzyme-adapter-react-16`
-
 - ^ adapter tells enzyme what kind of code to expect, in this case the adapter should tell enzyme to expect React 16 code
 - Enzyme renders (`shallow`/`mount`) will return a `wrapper`, which we will then pass as an argument to the Jest `expect` *assertion* and then evaluate using a *matcher* (e.g., `toBeTruthy`)
   - e.g., `expect(wrapper).toBeTruthy()`
+
+- When using Enzyme selectors use the *attribute syntax* as it is less susceptible to change by other devs, i.e., other devs will likely change the class, element or id
+  - https://airbnb.io/enzyme/docs/api/selector.html#1-a-valid-css-selector
+- Use the factory function `setup` to create a DRY-embodiment wrapper in test.js files, and this function can also be used to pass in `props` and/or `state`
+- Use the 'findByTestAttr' function
 
 ### Types of Tests
 - Unit: tests one piece of code (usually a function) and so is narrow and isolated in scope

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default () => {
   return (
-    <h2>Click Counter</h2>
+    <div data-test='click-counter-component'>
+      <h2 data-test='counter-display'>Counter isplay</h2>
+      <button data-test='increment-button'>Increment counter</button>
+    </div>
   )
 }
