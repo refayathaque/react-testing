@@ -47,6 +47,8 @@
 ### Types of Tests
 - Unit: tests one piece of code (usually a function) and so is narrow and isolated in scope
 - Integration: tests how multiple units work together
+- Smoke
+  > Minimal component tests verify that the component renders properly aka smoke testing or “Build Verification Testing”, [link](https://medium.com/selleo/testing-react-components-best-practices-2f77ac302d12)
 
 ## Paradigm
 
