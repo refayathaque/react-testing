@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps }  from '../testUtils';
+import { findByTestAttr, checkProps }  from '../../testUtils';
 import JottoGuessedWords from '../JottoGuessedWords';
 
 const defaultProps = {
@@ -30,13 +30,13 @@ describe('if there are no words guessed', () => {
   beforeEach(() => {
      wrapper = setup({ guessedWords: [] })
   })
-  // ^ runs and assigns value to `wrapper` before each test
+  // ^ runs and assigns a value to `wrapper` before each test, e.g., passes in a specific prop if that is what we need for the specific group of tests
 
   test('renders without error', () => {
     const component = findByTestAttr(wrapper, 'jotto-guessed-words-component')
     expect(component.length).toBe(1);
   })
-  // ^ same as first test in this file
+  // ^ same as smoke test above, so not sure if this is absolutely necessary, maybe the instructor wanted to check again that the component rendered correctly when running this group of tests?
 
   test('renders instructions to guess a word', () => {
     const instructions = findByTestAttr(wrapper, 'guess-instructions')

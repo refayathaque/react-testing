@@ -16,10 +16,11 @@ export const checkProps = (component, conformingProps) => {
     conformingProps,
     // ^ props we expect to pass
     'prop',
+    // ^ docs do not explain the need for this string...
     component.name
   );
   expect(propError).toBeUndefined();
 }
-// test should pass because we are checking for a negative, we are asking `checkPropTypes` if there is anything wrong with the `expectedProps` we are providing
-// but an error will be thrown if the `conformingProps` does not conform to the `component.propType`, or if the `component.propType` does not match the `conformingProps`
+// test should pass because we are checking for a negative (i.e., undefined value), we are asking `checkPropTypes` if there is anything wrong with the `conformingProps` we are providing
+// an error will be thrown if the `conformingProps` does not conform to the `component.propType`, or if the `component.propType` does not match the `conformingProps`
 // Good way of catching issues that could arise from others in your team changing the props and their types in the component

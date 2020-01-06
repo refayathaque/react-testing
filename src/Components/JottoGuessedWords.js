@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const JottoGuessedWords = ({ guessedWords }) => {
+  const divStyle = {
+    border: '1px solid green'
+  };
+
   let content
   if (guessedWords.length === 0) {
     content = <span data-test='guess-instructions'>Try to guess the secret words!</span>
@@ -29,7 +33,7 @@ const JottoGuessedWords = ({ guessedWords }) => {
   }
 
   return (
-    <div data-test='jotto-guessed-words-component'>
+    <div data-test='jotto-guessed-words-component' style={divStyle}>
       {content}
     </div>
   )

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 export default () => {
+  const divStyle = {
+    border: '1px solid blue'
+  };
+
   const [counter, setCounter] = useState(0);
   const [displayWarning, setDisplayWarning] = useState(false);
 
@@ -22,7 +26,7 @@ export default () => {
   }
 
   return (
-    <div data-test='click-counter-component'>
+    <div data-test='click-counter-component' style={divStyle}>
       <h2 data-test='counter-display'>Counter: {counter}</h2>
       <button data-test='increment-button' onClick={() => controlIncrement()}>Increment counter</button>
       <button data-test='decrement-button' onClick={() => controlDecrement()}>Decrement counter</button>

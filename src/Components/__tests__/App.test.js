@@ -8,6 +8,7 @@ Enzyme.configure({
 })
 
 test('Renders without crashing', () => {
+  // basic form of a smoke test to ensure that SOMETHING renders
   const wrapper = shallow(<App />)
   // console.log(wrapper.debug()); logs what is in the DOM, useful for debugging
   // expect(wrapper).toBeFalsy(); will cause test to fail bc we are rendering SOMETHING in the DOM

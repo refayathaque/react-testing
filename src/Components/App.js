@@ -2,7 +2,7 @@ import React from 'react';
 import ClickCounter from './ClickCounter';
 import Jotto from './Jotto';
 import { Router, Route, NavLink, Redirect } from 'react-router-dom';
-import history from './history';
+import history from '../history';
 
 export default () => {
   return (
