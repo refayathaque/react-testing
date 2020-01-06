@@ -8,7 +8,7 @@ const defaultProps = { success: false };
 // e.g., `success: PropTypes.bool.isRequired` for JottoCongrats
 
 /**
-* Factory function to create a ShallowWrapper for the ClickCounter component
+* Factory function to create a ShallowWrapper for the JottoCongrats component
 * @function setup
 * @param {object} props - Component props specific to this setup
 * @returns {ShallowWrapper} - From enzyme (look above in import statement)
@@ -25,15 +25,15 @@ const setup = ( props = {} ) => {
 test('JottoCongrats renders without crashing and specifically renders itself and not another component', () => {
   const wrapper = setup()
   expect(wrapper).toBeTruthy();
-  const jottoComponent = findByTestAttr(wrapper, 'jotto-congrats-component')
-  expect(jottoComponent.length).toBe(1);
+  const jottoCongratsComponent = findByTestAttr(wrapper, 'jotto-congrats-component')
+  expect(jottoCongratsComponent.length).toBe(1);
 });
 
 test('renders no text when `success` prop is false', () => {
   const wrapper = setup({ success: false })
-  const jottoComponent = findByTestAttr(wrapper, 'jotto-congrats-component')
-  expect(jottoComponent.text()).toBe('')
-  expect(jottoComponent.text()).toBeFalsy()
+  const jottoCongratsComponent = findByTestAttr(wrapper, 'jotto-congrats-component')
+  expect(jottoCongratsComponent.text()).toBe('')
+  expect(jottoCongratsComponent.text()).toBeFalsy()
   // ^ `toBeFalsy()` is redundant with `toBe('')`, but is here to show that both can work when testing for no text
 })
 
