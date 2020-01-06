@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import JottoCongrats from './JottoCongrats';
-import { findByTestAttr, checkProps } from './testUtils';
+import JottoCongrats from '../JottoCongrats';
+import { findByTestAttr, checkProps } from '../testUtils';
 
 const defaultProps = { success: false };
 // ^ done to have our tests (that do not care about props) pass when a component REQUIRES a prop

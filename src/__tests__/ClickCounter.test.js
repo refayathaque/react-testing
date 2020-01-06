@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ClickCounter from './ClickCounter';
-import { findByTestAttr } from './testUtils';
+import ClickCounter from '../ClickCounter';
+import { findByTestAttr } from '../testUtils';
 
 /**
 * Factory function to create a ShallowWrapper for the ClickCounter component
