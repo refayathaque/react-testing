@@ -5,7 +5,7 @@
 import '@testing-library/jest-dom/extend-expect';
 // ^ set up by, and comes pre-packaged with, CRA
 
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({
