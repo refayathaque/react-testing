@@ -38,6 +38,10 @@
   - https://airbnb.io/enzyme/docs/api/selector.html#1-a-valid-css-selector
 - Use the factory function `setup` to create a DRY-embodiment wrapper in test.js files, and this function can also be used to pass in `props` and/or `state`
   - Use the 'findByTestAttr' function for DRY as well
+  
+### Enzyme Documentation
+- ** Uses matchers/assertions from *Chai* instead of Jest, since we are using Jest we have to find Jest equivaleent matchers
+- E.g., the documentation has `expect(...).to.equal(true)` and running this will return an `undefined` error in Jest, the equvalent matcher in Jest is `expect(...).toEqual(true)` so that should be used instead
 
 ### Checking Prop-Types
 - Important, despite having coverage in ESLint, to solve issues that could arise from others in your team changing the props and their types in the component
