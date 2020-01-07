@@ -40,7 +40,7 @@
   - Use the 'findByTestAttr' function for DRY as well
   
 ### Enzyme Documentation
-- ** Uses matchers/assertions from *Chai* instead of Jest, since we are using Jest we have to find Jest equivaleent matchers **
+- **Uses matchers/assertions from *Chai* instead of Jest, since we are using Jest we have to find Jest equivaleent matchers**
 - E.g., the documentation has `expect(...).to.equal(true)` and running this will return an `undefined` error in Jest, the equvalent matcher in Jest is `expect(...).toEqual(true)` so that should be used instead
 
 ### Checking Prop-Types
