@@ -47,6 +47,23 @@
 - Important, despite having coverage in ESLint, to solve issues that could arise from others in your team changing the props and their types in the component
   - Issues arising from ^ can be more easily caught if testing include Prop-Types
 - `npm install --save-dev check-prop-types`
+- When using this library it's important to remember the structure of the `props` `object` you are passing into the function `checkPropTypes`
+  - Keyword here is `object` React components take in an `object` that has `keys` corresponding to `prop` `values` in the form of strings/arrays/objects/booleans/numbers/nested structures of </etc.
+  - In your test file, before having implemented this library, you might be declaring and assigning you `defaultProps` variable to whatever you assume a specific `prop` `key` value should be, e.g., an array, object, string, etc.
+    - And that should work as you will pass in that value in your tests as `<MyComponent propName={defaultProps}>`
+    - But this will not work with the `checkPropTypes` function as it is looking for the `props` **`OBJECT`** with `keys` corresponding to the `prop` values
+    - `const defaultProps = { products:
+  [
+    { id: 0, name: 'White Paper A', location: '' },
+    { id: 2, name: 'Other Resource C', location: '' },
+    { id: 4, name: 'Threat Briefing E', location: '' },
+  ]
+};`
+    - NOT `[
+    { id: 0, name: 'White Paper A', location: '' },
+    { id: 2, name: 'Other Resource C', location: '' },
+    { id: 4, name: 'Threat Briefing E', location: '' },
+  ]`
 
 ### Types of Tests
 - Unit: tests one piece of code (usually a function) and so is narrow and isolated in scope
