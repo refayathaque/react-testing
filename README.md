@@ -59,7 +59,7 @@
     { id: 4, name: 'Threat Briefing E', location: '' },
   ]
 };`
-    - NOT `[
+    - NOT `const defaultProps = [
     { id: 0, name: 'White Paper A', location: '' },
     { id: 2, name: 'Other Resource C', location: '' },
     { id: 4, name: 'Threat Briefing E', location: '' },
