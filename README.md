@@ -54,15 +54,15 @@
     - But this will not work with the `checkPropTypes` function as it is looking for the `props` **`OBJECT`** with `keys` corresponding to the `prop` values
     - `const defaultProps = { products:
   [
-    { id: 0, name: 'White Paper A', location: '' },
-    { id: 2, name: 'Other Resource C', location: '' },
-    { id: 4, name: 'Threat Briefing E', location: '' },
+    { id: 0, name: 'Poophead Andrew', location: 'Dhaka' },
+    { id: 2, name: 'Poophead Tom', location: 'Chittagong' },
+    { id: 4, name: 'Poophead Brian', location: 'Sylhet' },
   ]
 };`
     - NOT `const defaultProps = [
-    { id: 0, name: 'White Paper A', location: '' },
-    { id: 2, name: 'Other Resource C', location: '' },
-    { id: 4, name: 'Threat Briefing E', location: '' },
+    { id: 0, name: 'Poophead Andrew', location: 'Dhaka' },
+    { id: 2, name: 'Poophead Tom', location: 'Chittagong' },
+    { id: 4, name: 'Poophead Brian', location: 'Sylhet' },
   ]`
 
 ### Types of Tests
