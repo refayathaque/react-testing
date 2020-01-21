@@ -7,7 +7,7 @@ const defaultProps = {
   guessedWords: [{guessedWord: 'train', letterMatchCount: 3}]
 }
 
-const setup = (props = {}) => {
+const setup = ( props = {} ) => {
   const setupProps = { ...defaultProps, ...props }
   return shallow(<JottoGuessedWords {...setupProps} />)
 }

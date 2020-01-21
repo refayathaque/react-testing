@@ -1,4 +1,6 @@
 import checkPropTypes from 'check-prop-types'
+import { createStore } from 'redux';
+import rootReducer from './reducers';
 
 /**
 * Return ShallowWrapper containing node(s) with the given data-test value
@@ -24,3 +26,14 @@ export const checkProps = (component, conformingProps) => {
 // test should pass because we are checking for a negative (i.e., undefined value), we are asking `checkPropTypes` if there is anything wrong with the `conformingProps` we are providing
 // an error will be thrown if the `conformingProps` does not conform to the `component.propType`, or if the `component.propType` does not match the `conformingProps`
 // Good way of catching issues that could arise from others in your team changing the props and their types in the component
+
+/**
+* Create a testing store with imported reducers, middleware, and initial state.
+* globals: rootReducer.
+* @param {object} initialState - Initial state for store.
+* @function storeFactory
+* @returns {Store} - Redux store.
+*/
+export const storeFactory = (initialState) => {
+  return createStore(rootReducer, initialState)
+}
