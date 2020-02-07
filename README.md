@@ -66,6 +66,9 @@
     { id: 4, name: 'Brian', location: 'Sylhet' },
   ]`
 
+### React Router
+- https://reacttraining.com/react-router/web/guides/testing
+
 ### Types of Tests
 - Unit: tests one piece of code (usually a function) and so is narrow and isolated in scope
 - Integration: tests how multiple units work together
