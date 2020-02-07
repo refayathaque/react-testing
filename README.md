@@ -18,6 +18,7 @@
 ### Jest
 - Test runner that comes pre-packaged with `create-react-app`
 - Has its [**own built in matchers for use with the `expect` assertion**](https://jestjs.io/docs/en/expect)
+- `.toBe()` matcher will only work on immutable data types like numbers, strings and booleans, for *mutable* data types (e.g., objects and arrays) use `.toEqual()` matcher
 
 ### Enzyme
 - Creates the virtual DOM needed to test React without a browser, bc we need to see, e.g., how components render and respond to user input
