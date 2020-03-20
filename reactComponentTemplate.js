@@ -1,13 +1,13 @@
 // react
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // react-bootstrap
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
 // other libs/imports
 // images
 // components
@@ -15,7 +15,19 @@ import Button from 'react-bootstrap/Button';
 
 const ComponentName = () => {
 
-  const renderBody = () => {
+  const renderHeading = () => {
+    return <h2 className="mt-3">Hello World</h2>;
+  };
+
+  const renderBlurb = () => {
+    return (
+      <p>
+        helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld
+      </p>
+    );
+  };
+
+  const renderMain = () => {
     return (
       'helloWorld'
     )
@@ -23,7 +35,9 @@ const ComponentName = () => {
 
   return (
     <Container>
-      {renderBody()}
+      {renderHeading()}
+      {renderBlurb()}
+      {renderMain()}
     </Container>
   )
 }
