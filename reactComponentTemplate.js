@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 // components
 // action creators
 
-const ComponentName = () => {
+const ComponentName = ({ actionCreator, reducer }) => {
 
   const renderHeading = () => {
     return <h2 className="mt-3">Hello World</h2>;
@@ -44,4 +44,11 @@ const ComponentName = () => {
   )
 }
 
-export default connect(null, {  })(ComponentName);
+const mapStateToProps = ({ reducer }) => {
+  return {
+    reducer
+  };
+};
+
+export default connect(mapStateToProps, { actionCreator })(ComponentName);
+// export default connect(null, {  })(ComponentName);
