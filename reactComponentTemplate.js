@@ -10,9 +10,10 @@ import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 // other libs/imports
+import { connect } from 'react-redux';
 // images
 // components
-// action reducers
+// action creators
 
 const ComponentName = () => {
 
@@ -43,4 +44,4 @@ const ComponentName = () => {
   )
 }
 
-export default ComponentName;
+export default connect(null, {  })(ComponentName);
