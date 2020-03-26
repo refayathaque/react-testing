@@ -16,6 +16,8 @@ import { connect } from 'react-redux';
 // action creators
 
 const ComponentName = ({ actionCreator, reducer }) => {
+  
+  const [, set] = useState('');
 
   const renderHeading = () => {
     return <h2 className="mt-3">Hello World</h2>;
