@@ -14,6 +14,8 @@ import { connect } from 'react-redux';
 // images
 // components
 // action creators
+// styling
+// helper functions
 
 const ComponentName = ({ actionCreator, reducer }) => {
   
